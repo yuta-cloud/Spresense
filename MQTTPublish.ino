@@ -22,7 +22,7 @@
 
 #define  CONSOLE_BAUDRATE  115200
 
-#define  MQTT_SRVR     "13.112.65.30"
+#define  MQTT_SRVR     "35.87.185.226"
 #define  MQTT_PORT     "1883"
 #define  MQTT_CLI_ID   "Telit_Device_pub"
 #define  MQTT_TOPIC    "Telit/property"
@@ -37,7 +37,7 @@ void setup() {
 	Serial.begin( CONSOLE_BAUDRATE ); // talk to PC
 
 	/* Initialize SPI access of GS2200 */
-	Init_GS2200_SPI();
+	Init_GS2200_SPI_type(iS110B_TypeC);
 
 	digitalWrite( LED0, HIGH ); // turn on LED
 
